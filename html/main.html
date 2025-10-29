@@ -2,11 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/WAD-PROJECT-MERN-TEAM/css/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
     <title>dance</title>
 
@@ -22,15 +28,139 @@
           <span class="bar"></span>
         </button>
         <ul class="navbar-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Register</a></li>
+          <li><a href="#">Styles</a></li>
           <li><a href="#">Achievements</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Join us</a></li>
           <li><a href="#">Outcomes</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Fund</a></li>
+          <li>
+            <a href="#" style="background-color: #0a9b0a; border-radius: 10px"
+              >Log in</a
+            >
+          </li>
+          <li>
+            <a href="#" style="background-color: #0a9b0a; border-radius: 10px"
+              >Sign up</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
+    <div
+      id="carouselExampleDark"
+      class="carousel carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img
+            src="https://www.235-1.com/cinephoto/235_27.jpg"
+            class="d-block w-100"
+            alt="caro1"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Join The Cult?</h5>
+            <p>
+              We’re not just a dance crew — we’re a phenomenon. A pulse. A
+              rebellion. Every step we take is a statement. Every formation, a
+              ritual. We don’t perform. We initiate.
+            </p>
+            <button class="btn btn-secondary">Sign up</button> <br />
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img
+            src="https://www.235-1.com/cinephoto/235_26.jpg"
+            class="d-block w-100"
+            alt="caro2"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img
+            src="https://www.driftwoodjournals.com/s/img/wp-content/uploads/2020/10/22Summer-Scenes22-A-Cinematic-Series-Photography-Gower-Peninsula-South-Wales-Ben-Holbrook-Edited-with-Aditya-Varma-Vintage-Film-Lightroom-Presets-from-DriftwoodJournals.com-72-1280x544.jpg"
+            class="d-block w-100"
+            alt="caro3"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Styles -->
+    <div class="skills">
+      <h2>What's your Skill?</h2>
+    </div>
+    <div class="cardContainer">
+      <div class="card">
+        <h4 style="color: green;">Beginner</h4>
+        <p>No experience? No problem. We start with your heartbeat</p>
+      </div>
+      <br /><br />
+      <div class="card">
+        <h4 style="color: rgb(255, 196, 0);">Intermediate</h4>
+        <p>You’ve got the basics, now refine your style, beyond limits.</p>
+      </div>
+      <br /><br />
+      <div class="card">
+        <h4 style="color: red;">Expert</h4>
+        <p>Break boundaries. Set trends. Own the floor</p>
+      </div>
+      <br /><br /><br>
+    </div>
+   <div class="events">hi</div>
+    
+
   </body>
-  <script src="/js/main.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+  <script src="/WAD-PROJECT-MERN-TEAM/js/main.js"></script>
 </html>

@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Arizonia&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Arizonia&family=Jersey+10&family=Megrim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sankofa+Display&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,22 +6,19 @@
 }
 
 body {
-  background: url("/assets/retro-world-theatre-day-scenes-with-curtains-stage.jpg");
+  /* background: url("https://img.freepik.com/free-vector/stage-lighting-spectacular-scene_107791-32750.jpg?semt=ais_hybrid&w=740&q=80"); */
   min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  height: 100px;
   width: 100%;
   position: sticky;
   top: 0;
-  background-color: transparent;
-  box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337);
+  background-color: black;
+  /* box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337); */
   backdrop-filter: blur(10px);
   z-index: 999;
 }
@@ -36,10 +31,20 @@ body {
   padding: 0 2rem;
   max-width: 1600px;
 }
-
+@media screen and (max-width: 1025px) {
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0 1rem;
+    /* max-width: 1600px; */
+  }
+}
 .navbar-logo {
-  font-family: Arizonia;
-  font-size: 2rem;
+  font-family: "Poppins";
+  font-variation-settings: "wght" 100, "wdth" 50, "STRS" 0;
+  font-size: 1.8rem;
   text-decoration: none;
   color: #f3e5c3;
   font-weight: 600;
@@ -51,23 +56,26 @@ body {
   text-align: center;
   gap: 1.5rem;
   list-style: none;
+  margin-top: 10px;
 }
 .navbar-container .navbar-menu li a {
   text-decoration: none;
   color: white;
-  font-family: Alumni Sans Pinstripe;
+  font-family: "Poppins";
   font-size: 1.3rem;
-  font-weight: 1000;
-  padding: 3px 20px;
+  font-weight: 600;
+  padding: 3px 15px;
   border-radius: 20px;
   border: 2px solid transparent;
   transition: all ease-in-out 0.4s;
   white-space: nowrap;
 }
 .navbar-container .navbar-menu li a:hover {
-  color: rgba(0, 0, 0, 0.726);
-  background: #f3e5c3;
+  /* color: rgba(0, 0, 0, 0.726); */
+  /* background: #f3e5c3; */
   /* border:2px solid white; */
+  color: #3f3d3d;
+  transform: scale(1.5);
 }
 
 .navbar-toggle {
@@ -105,23 +113,64 @@ body {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.547);
     backdrop-filter: blur(10px);
   }
-    .navbar-container .navbar-menu.active {
-      display: flex;
-    }
+  .navbar-container .navbar-menu.active {
+    display: flex;
+  }
   .navbar-toggle {
     display: block;
     z-index: 999;
   }
 
-  .navbar-toggle.active .bar:nth-child(2){
+  .navbar-toggle.active .bar:nth-child(2) {
     opacity: 0;
   }
-  
-  .navbar-toggle.active .bar:nth-child(1){
-    transform:translateY(8px) rotate(45deg);
+
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
 
-  .navbar-toggle.active .bar:nth-child(3){
-    transform:translateY(-8px) rotate(-45deg);
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
+}
+
+.carousel-caption h5 {
+  font-family: poppins;
+  font-size: 40px;
+}
+.carousel-caption p {
+  font-family: poppins;
+  font-size: 20px;
+}
+
+/* Skills*/
+.skills {
+  background-color: black;
+  color: white;
+  padding: 40px 70px 70px 30px;
+  display: flex;
+}
+.card {
+  width: 350px;
+  height: 300px;
+  border-radius: 30px;
+  color: white;
+  font-family: poppins;
+  text-align: center;
+  background-color: #212121;
+  padding: 40px;
+  margin: 10px;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+}
+.cardContainer {
+  padding-top: 30px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.events {
+  background-color: black;
+  color: white;
 }
