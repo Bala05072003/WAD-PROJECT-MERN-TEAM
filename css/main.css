@@ -18,7 +18,7 @@ body {
   position: sticky;
   top: 0;
   background-color: black;
-  /* box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337); */
+  box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337);
   backdrop-filter: blur(10px);
   z-index: 999;
 }
@@ -38,6 +38,7 @@ body {
     justify-content: space-between;
     width: 90%;
     padding: 0 1rem;
+    margin-left: 50px;
     /* max-width: 1600px; */
   }
 }
@@ -64,7 +65,7 @@ body {
   font-family: "Poppins";
   font-size: 1.3rem;
   font-weight: 600;
-  padding: 3px 15px;
+  /* padding: 3px 15px; */
   border-radius: 20px;
   border: 2px solid transparent;
   transition: all ease-in-out 0.4s;
@@ -74,8 +75,59 @@ body {
   /* color: rgba(0, 0, 0, 0.726); */
   /* background: #f3e5c3; */
   /* border:2px solid white; */
-  color: #3f3d3d;
+  color: #085208;
   transform: scale(1.5);
+}
+
+.navButton {
+  --green: #1bfd9c;
+  font-size: 15px;
+  padding: 0.2em 1.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: poppins;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(
+    to right,
+    rgba(27, 253, 156, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(27, 253, 156, 0.1) 100%
+  );
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4),
+    0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.navButton:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6),
+    0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.navButton:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    rgba(27, 253, 156, 0.1) 40%,
+    rgba(27, 253, 156, 0.1) 60%,
+    transparent 100%
+  );
+}
+
+.navButton:hover:before {
+  transform: translateX(15em);
 }
 
 .navbar-toggle {
@@ -110,6 +162,7 @@ body {
     top: 0;
     right: 0;
     padding: 5rem 1.5rem;
+    background-color: black;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.547);
     backdrop-filter: blur(10px);
   }
@@ -134,43 +187,169 @@ body {
   }
 }
 
-.carousel-caption h5 {
-  font-family: poppins;
-  font-size: 40px;
-}
-.carousel-caption p {
-  font-family: poppins;
-  font-size: 20px;
-}
+/* hero */
 
-/* Skills*/
-.skills {
-  background-color: black;
-  color: white;
-  padding: 40px 70px 70px 30px;
+.hero {
   display: flex;
-}
-.card {
-  width: 350px;
-  height: 300px;
-  border-radius: 30px;
-  color: white;
-  font-family: poppins;
-  text-align: center;
-  background-color: #212121;
   padding: 40px;
-  margin: 10px;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
-}
-.cardContainer {
-  padding-top: 30px;
   background-color: black;
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-.events {
-  background-color: black;
+.heroContent {
   color: white;
+  padding: 20px;
+  font-family: poppins;
+  text-align: justify;
+  line-height: 35px;
+}
+.hero2 {
+  display: flex;
+  padding: 40px;
+  background-color: black;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero2Content {
+  color: white;
+  padding: 40px;
+  font-family: poppins;
+  text-align: justify;
+  line-height: 35px;
+}
+@media screen and (max-width: 321px) {
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 3rem 1.5rem;
+    background-color: black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.547);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+  }
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* width: 10%; */
+    /* padding:  0.5rem; */
+    gap: 30px;
+  }
+  .navbar-logo {
+    font-family: "Poppins";
+    font-variation-settings: "wght" 100, "wdth" 50, "STRS" 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f3e5c3;
+    font-weight: 500;
+    cursor: pointer;
+    padding-right: 70px;
+  }
+  .hero {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero2 {
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+  }
+  .hero img {
+    width: 320px;
+  }
+  .heroContent {
+    text-align: start;
+    line-height: normal;
+    text-align: start;
+  }
+  .hero2 img {
+    width: 320px;
+  }
+  .hero2Content {
+    text-align: start;
+    line-height: normal;
+    padding: 20px;
+    text-align: start;
+  }
+
+  /* card */
+  /* From Uiverse.io by gharsh11032000 */
+  /* From Uiverse.io by ahmedyasserdev */
+  .unique-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .unique-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #888;
+    z-index: 2;
+    transition: color 0.3s;
+  }
+
+  .unique-card:hover .card-content {
+    color: #ff7e5f;
+  }
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.7);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .unique-card:hover .background-overlay {
+    opacity: 1;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card-description {
+    font-size: 16px;
+  }
 }
