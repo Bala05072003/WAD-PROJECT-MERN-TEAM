@@ -146,7 +146,28 @@ body {
   background-color: #f3e5c3;
   transition: all ease-in-out 0.4s;
 }
+.welcome {
+  color: #1bfd9c;
+  font-family: poppins;
+}
+.intro {
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.introText {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 35px 35px;
+  /* line-height: 50px; */
+  font-size: 50px;
+  font-family: poppins;
+}
 @media (max-width: 880px) {
   .navbar {
     backdrop-filter: none;
@@ -203,19 +224,427 @@ body {
   text-align: justify;
   line-height: 35px;
 }
-.hero2 {
+.acheivements {
   display: flex;
-  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: black;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
-.hero2Content {
+
+/* Card slider */
+/* let us know */
+.FormTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.letUsForm {
+  background-color: black;
+  padding-top: 30px;
   color: white;
-  padding: 40px;
+}
+/* From Uiverse.io by firemonste_8052 */
+.letUsul {
+  list-style: none;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.example-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder; /* Made bolder */
+  background-color: #000; /* Black background */
+  border-radius: 30px; /* Added border-radius to make the container rounded */
+  padding: 20px; /* Added padding for better appearance */
+  height: 70px;
+  width: 300px;
+}
+
+.example-1 .icon-content {
+  margin: 0 10px;
+  position: relative;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.example-1 .icon-content .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff; /* White icons */
+  background-color: #000; /* Black background */
+  transition: all 0.3s ease-in-out;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content .link:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-1 .icon-content .link svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff; /* White icons */
+}
+
+.example-1 .icon-content .link[data-social="spotify"]:hover {
+  color: #00a2ff;
+}
+
+.example-1 .icon-content .link[data-social="pinterest"]:hover {
+  color: #ff009d;
+}
+
+.example-1 .icon-content .link[data-social="dribbble"]:hover {
+  color: #686868;
+}
+
+.example-1 .icon-content .link[data-social="telegram"]:hover {
+  color: #23b100;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputs label {
   font-family: poppins;
-  text-align: justify;
-  line-height: 35px;
+  margin-right: 10px;
+}
+#letUsMail {
+  background-color: darkgray;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+#bottone1 {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 9px;
+  background: #1a8d5b;
+  border: none;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#bottone1:hover {
+  box-shadow: 7px 5px 56px -14px #1bfd9c;
+  color: white;
+}
+
+#bottone1:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #1bfd9c;
+}
+.footer {
+  background-color: black;
+  padding-top: 30px;
+}
+.footerText {
+  text-align: center;
+}
+.finalText {
+  text-align: center;
+  color: white;
+  background-color: #000;
+}
+
+
+@media screen and (max-width: 1025px) {
+  /*  */
+
+  .navbar {
+    /* display: flex;
+    justify-content: space-around;
+    align-item; */
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337);
+    backdrop-filter: blur(10px);
+    /* padding-right: 30px; */
+    z-index: 999;
+  }
+  .navbar-container {
+    /* display: flex;
+    align-items:center;
+    justify-content: space-evenly; */
+    margin: 0px 0px 0px 30px;
+    /* width: 10%; */
+    /* padding:  0.5rem; */
+    /* gap: 30px; */
+  }
+  .navbar-logo {
+    font-family: "Poppins";
+    font-variation-settings: "wght" 100, "wdth" 50, "STRS" 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f3e5c3;
+    font-weight: 500;
+    cursor: pointer;
+    /* padding-right: 70px; */
+  }
+  .hero {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero img {
+    width: 1000px;
+  }
+  .heroContent {
+    text-align: start;
+    line-height: normal;
+    text-align: start;
+        width: 1000px;
+
+  }
+}
+
+
+@media screen and (max-width: 769px) {
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 3rem 1.5rem;
+    background-color: black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.547);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar {
+    /* display: flex;
+    justify-content: space-around;
+    align-item; */
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337);
+    backdrop-filter: blur(10px);
+    /* padding-right: 30px; */
+    z-index: 999;
+  }
+  .navbar-container {
+    /* display: flex;
+    align-items:center;
+    justify-content: space-evenly; */
+    margin: 0px 0px 0px 0px;
+    /* width: 10%; */
+    /* padding:  0.5rem; */
+    /* gap: 30px; */
+  }
+  .navbar-logo {
+    font-family: "Poppins";
+    font-variation-settings: "wght" 100, "wdth" 50, "STRS" 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f3e5c3;
+    font-weight: 500;
+    padding-left: 45px;
+    cursor: pointer;
+    /* padding-right: 70px; */
+  }
+  .hero {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero img {
+    width: 700px;
+  }
+  .heroContent {
+    text-align: start;
+    line-height: normal;
+    text-align: start;
+    width: 700;
+  }
+}
+
+
+
+@media screen and (max-width: 426px) {
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 3rem 1.5rem;
+    background-color: black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.547);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar {
+    /* display: flex;
+    justify-content: space-around;
+    align-item; */
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337);
+    backdrop-filter: blur(10px);
+    /* padding-right: 30px; */
+    z-index: 999;
+  }
+  .navbar-container {
+    /* display: flex;
+    align-items:center;
+    justify-content: space-evenly; */
+    margin: 0px 0px 0px 0px;
+    /* width: 10%; */
+    /* padding:  0.5rem; */
+    /* gap: 30px; */
+  }
+  .navbar-logo {
+    font-family: "Poppins";
+    font-variation-settings: "wght" 100, "wdth" 50, "STRS" 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f3e5c3;
+    font-weight: 500;
+    cursor: pointer;
+    /* padding-right: 70px; */
+  }
+  .hero {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero img {
+    width: 420px;
+  }
+  .heroContent {
+    text-align: start;
+    line-height: normal;
+    text-align: start;
+  }
+}
+
+
+
+@media screen and (max-width: 376px) {
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 3rem 1.5rem;
+    background-color: black;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.547);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar {
+    /* display: flex;
+    justify-content: space-around;
+    align-item; */
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(4, 4, 4, 0.337);
+    backdrop-filter: blur(10px);
+    /* padding-right: 30px; */
+    z-index: 999;
+  }
+  .navbar-container {
+    /* display: flex;
+    align-items:center;
+    justify-content: space-evenly; */
+    margin: 0px 0px 0px 0px;
+    /* width: 10%; */
+    /* padding:  0.5rem; */
+    /* gap: 30px; */
+  }
+  .navbar-logo {
+    font-family: "Poppins";
+    font-variation-settings: "wght" 100, "wdth" 50, "STRS" 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #f3e5c3;
+    font-weight: 500;
+    cursor: pointer;
+    /* padding-right: 70px; */
+  }
+  .hero {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero img {
+    width: 375px;
+  }
+  .heroContent {
+    text-align: start;
+    line-height: normal;
+    text-align: start;
+  }
+}
+.finalText {
+  font-family: poppins;
 }
 @media screen and (max-width: 321px) {
   .navbar-container .navbar-menu {
@@ -236,8 +665,9 @@ body {
 
   .navbar {
     display: flex;
-    align-items: start;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+
     height: 80px;
     width: 100%;
     position: sticky;
@@ -248,12 +678,12 @@ body {
     z-index: 999;
   }
   .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: left;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: left; 
     /* width: 10%; */
     /* padding:  0.5rem; */
-    gap: 30px;
+    gap: 10px;
   }
   .navbar-logo {
     font-family: "Poppins";
@@ -270,12 +700,6 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .hero2 {
-    padding: 20px 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: start;
-  }
   .hero img {
     width: 320px;
   }
@@ -283,73 +707,5 @@ body {
     text-align: start;
     line-height: normal;
     text-align: start;
-  }
-  .hero2 img {
-    width: 320px;
-  }
-  .hero2Content {
-    text-align: start;
-    line-height: normal;
-    padding: 20px;
-    text-align: start;
-  }
-
-  /* card */
-  /* From Uiverse.io by gharsh11032000 */
-  /* From Uiverse.io by ahmedyasserdev */
-  .unique-card {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .unique-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-
-  .card-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #888;
-    z-index: 2;
-    transition: color 0.3s;
-  }
-
-  .unique-card:hover .card-content {
-    color: #ff7e5f;
-  }
-
-  .background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(52, 73, 94, 0.7);
-    border-radius: 15px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .unique-card:hover .background-overlay {
-    opacity: 1;
-  }
-
-  .card-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .card-description {
-    font-size: 16px;
   }
 }
