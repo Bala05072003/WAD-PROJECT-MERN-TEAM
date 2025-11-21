@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - StepUnity</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container" style="max-width:500px; margin-top:60px;">
+    <h2 class="welcome text-center">Create Account</h2>
+    <form id="signupForm">
+      <div class="mb-3">
+        <label>Name</label>
+        <input name="name" class="form-control" placeholder="Your name" />
+      </div>
+      <div class="mb-3">
+        <label>Email</label>
+        <input name="email" type="email" class="form-control" placeholder="Email" required />
+      </div>
+      <div class="mb-3">
+        <label>Password</label>
+        <input name="password" type="password" class="form-control" placeholder="Password" required />
+      </div>
+      <button class="btn btn-dark w-100" type="submit">Sign Up</button>
+    </form>
+    <p class="text-center mt-3">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+
+<script>
+const BASE_URL = 'http://localhost:5000';
+
+document.getElementById('signupForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const password = form.password.value;
+
+  try {
+    const res = await fetch(`${BASE_URL}/api/auth/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, password })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.msg || 'Signup failed');
+
+    // Save user id to localStorage (simple way to remember user)
+    localStorage.setItem('userId', data.user.id);
+    // Redirect to dashboard with user id in query param
+    window.location.href = `dashboard.html?id=${data.user.id}`;
+  } catch (err) {
+    alert(err.message);
+  }
+});
+</script>
+</body>
+</html>
