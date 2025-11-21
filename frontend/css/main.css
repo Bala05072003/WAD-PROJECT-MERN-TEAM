@@ -168,6 +168,7 @@ body {
   font-size: 50px;
   font-family: poppins;
 }
+
 @media (max-width: 880px) {
   .navbar {
     backdrop-filter: none;
@@ -244,7 +245,6 @@ body {
   padding-top: 30px;
   color: white;
 }
-/* From Uiverse.io by firemonste_8052 */
 .letUsul {
   list-style: none;
 }
@@ -388,8 +388,6 @@ body {
 
 
 @media screen and (max-width: 1025px) {
-  /*  */
-
   .navbar {
     /* display: flex;
     justify-content: space-around;
@@ -424,19 +422,22 @@ body {
     /* padding-right: 70px; */
   }
   .hero {
-    display: flex;
+    /* display: flex;
     padding: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
-  .hero img {
-    width: 1000px;
+  .imageConatiner img {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 1200px;
   }
   .heroContent {
-    text-align: start;
+    /* text-align: start;
     line-height: normal;
     text-align: start;
-        width: 1000px;
+    width: 1000px; */
 
   }
 }
